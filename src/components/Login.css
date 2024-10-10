@@ -1,0 +1,127 @@
+/* General Styling for the Login Page with Background */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('/public/HomePage-Main.png') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire page */
+  }
+  
+  .login-container {
+    flex-grow: 1; /* Take up the space between header and footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.85); /* Add a semi-transparent white overlay */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Some margin around the form */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .login-heading {
+    font-size: 2.5rem;
+    color: #0B3D2E; /* Forest green color for the heading */
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-input {
+    width: 250px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #0B3D2E;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .login-input:focus {
+    border-color: #1ABC9C; /* Light Green on focus */
+    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5); /* Green shadow on focus */
+  }
+  
+  .login-button {
+    background-color: #0B3D2E; /* Forest green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #145A32; /* Darker green */
+    transform: translateY(-3px); /* Slight upward motion on hover */
+  }
+  
+  .login-button:active {
+    transform: translateY(0); /* Remove upward motion on click */
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  /* Add shake animation */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.5s;
+  }
+  
+  /* Section for users without accounts */
+  .no-account {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #0B3D2E;
+  }
+  
+  .signup-link {
+    color: #1ABC9C; /* Light Green for signup link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-link:hover {
+    color: #145A32; /* Darker green on hover */
+  }
+  
+  /* Ensure footer sticks to the bottom */
+  footer {
+    flex-shrink: 0;
+  }
+  
+  header {
+    flex-shrink: 0;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .login-input {
+      width: 90%; /* Full width on smaller screens */
+    }
+  
+    .login-container {
+      margin: 0 10px; /* Reduce margin for mobile devices */
+    }
+  }
+  

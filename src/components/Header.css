@@ -1,0 +1,133 @@
+/* Header.css
+Primary Forest Green (Base):
+#0B3D2E – A deep, forest green that gives a natural, earthy feel.
+rgb(11, 61, 46)
+
+Complementary Light Green:
+#1ABC9C – A softer, light green for highlights or interactive elements like buttons.
+rgb(26, 188, 156)
+
+
+Muted Olive Green:
+#2E8B57 – A slightly muted olive green, great for secondary accents.
+rgb(46, 139, 87)
+
+Neutral Off-White:
+#F4F6F6 – A neutral off-white that contrasts well with the darker greens.
+rgb(244, 246, 246)
+
+Dark Charcoal Grey:
+#2C3E50 – A modern dark grey, suitable for text, borders, or shadows, to complement the earthy tones.
+rgb(44, 62, 80) */
+@font-face {
+    font-family: 'Helvetica-Thin';
+    src: url('../fonts/HelveticaNowText-Thin.ttf') format('truetype'); /* Path relative to the src folder */
+    src: url('../fonts/HelveticaNowText-Thin.woff') format('woff'); /* Path relative to the src folder */
+    src: url('../fonts/HelveticaNowText-Thin.woff2') format('woff2'); /* Path relative to the src folder */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+/* Header.css */
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade-in from top for the header and title */
+.fade-in-top {
+  animation: fadeInTop 1s ease;
+}
+
+/* Fade-in from left for the logo */
+.fade-in-left {
+  animation: fadeInLeft 1s ease;
+}
+
+/* Fade-in from right for the navbar */
+.fade-in-right {
+  animation: fadeInRight 1s ease;
+}
+
+/* The logo in the header */
+.logo-container img {
+  height: 50px; /* Final size of the logo in the header */
+  margin-right: 20px;
+}
+
+header {
+  font-family: "Helvetica-Thin";
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #0B3D2E; /* Dark modern background */
+  color: #F4F6F6; /* Light text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for a modern look */
+  z-index: 3;
+}
+
+header h1 {
+  font-family: "Helvetica-Thin";
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header img {
+    height: 40px;
+  }
+
+  header nav a {
+    padding: 8px 10px;
+  }
+}

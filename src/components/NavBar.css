@@ -1,0 +1,52 @@
+/* NavBar.css */
+@font-face {
+    font-family: 'Helvetica-Regular';
+    src: url('../fonts/HelveticaNowText-Regular.ttf') format('truetype'); /* Path relative to the src folder */
+    src: url('../fonts/HelveticaNowText-Regular.woff') format('woff'); /* Path relative to the src folder */
+    src: url('../fonts/HelveticaNowText-Regular.woff2') format('woff2'); /* Path relative to the src folder */
+    font-weight: normal;
+    font-style: normal;
+}
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    display: flex; /* Align items horizontally */
+    gap: 30px; /* Space between links */
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    position: relative;
+  }
+  
+  nav a {
+    font-family: 'Helvetica-Regular';
+    text-decoration: none; /* Remove default underline */
+    color: #ecf0f1; /* Light color for text */
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+  
+  nav a:hover {
+    opacity: 0.7; /* Change opacity on hover */
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #ecf0f1; /* Underline color */
+    transition: width 0.3s ease;
+    bottom: 0;
+    left: 0;
+  }
+  
+  nav a:hover::after {
+    width: 100%; /* Underline grows from left to right */
+  }
+  
