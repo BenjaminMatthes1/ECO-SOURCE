@@ -1,6 +1,8 @@
 // ContactUs.js
 import React, { useState } from 'react';
 import './ContactUs.css';
+import Header from './Header';
+import Footer from './Footer';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -23,6 +25,8 @@ function ContactUs() {
   };
 
   return (
+    <div>
+      <Header />
     <div className="contact-us-container">
       <form className="contact-form" onSubmit={handleSubmit}>
         <h2>Contact Us</h2>
@@ -59,6 +63,8 @@ function ContactUs() {
         <button type="submit">Submit</button>
       </form>
     </div>
+    <Footer />
+  </div>
   );
 }
 

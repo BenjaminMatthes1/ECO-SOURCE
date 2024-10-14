@@ -4,6 +4,7 @@ import './HomePage.css';
 import { Link } from 'react-router-dom'; // Import the Link component
 import { FaLeaf, FaLock, FaUsers, FaDollarSign } from 'react-icons/fa'; // Import the icons
 import Header from './Header'
+import Footer from './Footer';
 
 function HomePage() {
   const [counters, setCounters] = useState({
@@ -192,8 +193,9 @@ function HomePage() {
         </div>
       </div>
     </section>
-     
+    <Footer /> 
     </div>
+    
   );
 }
 

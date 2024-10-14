@@ -1,0 +1,151 @@
+
+/* SignUp.css */
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: url('/public/HomePage-Main.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    
+}
+  
+.form-section {
+    background-color: rgba(244, 246, 246, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+}
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;    
+    margin: 10px 0;
+    border: 2px solid #0B3D2E;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+
+  
+  input:focus, textarea:focus, select:focus {
+    border-color: #1ABC9C;
+    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
+  }
+  
+  /* Sleek File Upload Section */
+  .file-upload {
+    margin: 20px;
+    
+  }
+  
+  .upload-button {
+    background-color: #0B3D2E;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #145A32;
+    transform: translateY(-3px);
+  }
+  
+  /* Slider for Buyer/Seller */
+  .slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  /* Update slider appearance */
+  .slider {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    background-color: #E0E0E0;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+ 
+.slider-label {
+    font-size: 1.1rem;
+    color: #000;
+    padding: 0 20px;
+    line-height: 40px;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+  
+  /* Slider toggle (animated) */
+.slider-toggle {
+    position: absolute;
+    top: 0;
+    left: 0; /* Initially on the left (for Buyer) */
+    width: 100px;
+    height: 100%;
+    background-color: #0B3D2E;
+    border-radius: 40px;
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 0;
+  }
+
+  .slider-toggle.active {
+    left: 100px;
+  }
+  
+
+ /* Text color change when slider is activated */
+.slider.active .slider-label:first-child {
+    color: white; /* Change to white when "Buyer" is selected */
+  }
+  
+  .slider.active .slider-label:last-child {
+    color: white; /* Change to white when "Seller" is selected */
+  }
+  
+  .slider-label.active {
+    color: white; /* Ensure that the active label has white text */
+  }
+  
+  .slider-toggle.active + .slider-label {
+    color: white; /* Change text color to white for active state */
+  }
+  
+
+  button {
+    background-color: #0B3D2E;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #145A32;
+    transform: translateY(-3px);
+  }
+  

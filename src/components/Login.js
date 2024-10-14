@@ -13,9 +13,12 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
     // Simulate authentication check and set user in localStorage
-    if (username === 'user' && password === 'password') {
-      localStorage.setItem('user', 'true'); // Store user as logged in
+    if (storedUser && storedUser.username === username && storedUser.password === password) {
+
       setIsAuthenticated(true);
       setErrorMessage(''); // Clear any error messages
     } else {
@@ -25,13 +28,15 @@ function Login() {
     }
   };
 
-  if (isAuthenticated || localStorage.getItem('user')) {
-    return <Navigate to="/dashboard" />;
+  if (isAuthenticated) {
+    const userType = JSON.parse(localStorage.getItem('user')).businessType;
+    return <Navigate to={userType === 'buyer' ? '/buyer-dashboard' : '/seller-dashboard'} />;
   }
 
   return (
     <div className="login-page">
       <Header />
+      <div className= "page-container">
       <div className={`login-container ${shake ? 'shake' : ''}`}>
         <h2 className="login-heading">Login</h2>
         <form className="login-form" onSubmit={handleSubmit}>
@@ -49,7 +54,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             className="login-input"
           />
-          <button type="submit" className="login-button">Login</button>
+          <button type="submit" className="login-button">Connect</button>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </form>
 
@@ -57,6 +62,7 @@ function Login() {
         <p className="no-account">
           Don’t have an account? <Link to="/signup" className="signup-link">Apply now to view the best plan for you</Link>
         </p>
+      </div>
       </div>
       <Footer />
     </div>

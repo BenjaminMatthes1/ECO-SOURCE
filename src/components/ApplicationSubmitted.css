@@ -1,0 +1,47 @@
+/* General styling for ApplicationSubmitted page */
+.application-submitted-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/public/HomePage-Main.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+  }
+  
+  .confirmation-container {
+    background-color: rgba(244, 246, 246, 0.9); /* Off-white background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .confirmation-container h1 {
+    font-size: 2.5rem;
+    color: #0B3D2E; /* Primary Forest Green */
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-container p {
+    font-size: 1.2rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+  }
+  
+  .home-link {
+    padding: 10px 20px;
+    background-color: #1ABC9C; /* Light Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    background-color: #0B3D2E; /* Darker green */
+  }
+  

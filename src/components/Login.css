@@ -1,4 +1,14 @@
 /* General Styling for the Login Page with Background */
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .login-page {
     display: flex;
     flex-direction: column;
@@ -7,18 +17,28 @@
     background-size: cover; /* Ensure the image covers the entire page */
   }
   
+.page-container {
+  flex-grow: 1; /* Take up the space between header and footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
   .login-container {
-    flex-grow: 1; /* Take up the space between header and footer */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.85); /* Add a semi-transparent white overlay */
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px; /* Some margin around the form */
     transition: all 0.3s ease; /* Smooth transition */
+    max-width: 30%;
+    max-height: 400px;
+    
   }
   
   .login-heading {
@@ -34,7 +54,7 @@
   }
   
   .login-input {
-    width: 250px;
+    width: 300px;
     padding: 12px 15px;
     margin-bottom: 20px;
     border: 2px solid #0B3D2E;
@@ -52,12 +72,14 @@
   .login-button {
     background-color: #0B3D2E; /* Forest green */
     color: white;
-    padding: 12px 20px;
+    padding: 12px 40px;
     border: none;
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0;
+    letter-spacing: .1rem;
   }
   
   .login-button:hover {
@@ -90,19 +112,26 @@
   
   /* Section for users without accounts */
   .no-account {
-    margin-top: 20px;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     font-size: 1rem;
     color: #0B3D2E;
+    margin: 0 10px;
+    padding: 10px;
   }
   
   .signup-link {
     color: #1ABC9C; /* Light Green for signup link */
     text-decoration: none;
     transition: color 0.3s ease;
+    border-color: transparent;
+    margin: 0;
   }
   
   .signup-link:hover {
-    color: #145A32; /* Darker green on hover */
+    color: #f4f6f6; /* Darker green on hover */
   }
   
   /* Ensure footer sticks to the bottom */
